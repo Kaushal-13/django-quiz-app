@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<h2>Your Answer: {{ selected_answer }}</h2>
+{% if selected_answer == question.correct_answer %}
+<p style="color: green;">Correct!</p>
+{% else %}
+<p style="color: red;">Incorrect. The correct answer is {{ question.correct_answer }}.</p>
+{% endif %}
+
+<!-- Show Score Button -->
+<a href="{% url 'get_score' %}" class="button">Show Score</a>
+
+<p>Your current score: {{ score }} / {{ total_questions }}</p>
+
+<!-- Next Question Button -->
+<a href="{% url 'get_question' %}" class="button">Next Question</a>
+{% endblock %}

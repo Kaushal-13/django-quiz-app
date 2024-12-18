@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Your Score{% endblock %}
+
+{% block content %}
+<h2>Your Current Score</h2>
+<p>You have answered {{ total_questions }} question(s).</p>
+<p>Your current score is: {{ score }}</p>
+
+<!-- Home Button -->
+<form action="{% url 'start_quiz' %}" method="get">
+    <button type="submit">Home</button>
+</form>
+{% endblock %}

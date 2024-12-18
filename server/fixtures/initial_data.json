@@ -1,0 +1,35 @@
+[
+    {
+        "model": "server.question",
+        "pk": 1,
+        "fields": {
+            "question_text": "What is the capital of France?",
+            "correct_answer": "Paris",
+            "incorrect_answer_1": "London",
+            "incorrect_answer_2": "Berlin",
+            "incorrect_answer_3": "Madrid"
+        }
+    },
+    {
+        "model": "server.question",
+        "pk": 2,
+        "fields": {
+            "question_text": "Which planet is known as the Red Planet?",
+            "correct_answer": "Mars",
+            "incorrect_answer_1": "Venus",
+            "incorrect_answer_2": "Jupiter",
+            "incorrect_answer_3": "Saturn"
+        }
+    },
+    {
+        "model": "server.question",
+        "pk": 3,
+        "fields": {
+            "question_text": "Who wrote 'To Kill a Mockingbird'?",
+            "correct_answer": "Harper Lee",
+            "incorrect_answer_1": "Mark Twain",
+            "incorrect_answer_2": "F. Scott Fitzgerald",
+            "incorrect_answer_3": "Ernest Hemingway"
+        }
+    }
+]

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Start Quiz{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Quiz</h2>
+<p>Click below to start the quiz or check your current score.</p>
+
+<!-- Start Quiz Button -->
+<form action="{% url 'get_question' %}" method="get">
+    <button type="submit">Start Quiz</button>
+</form>
+
+<!-- Show Score Button -->
+<form action="{% url 'get_score' %}" method="get">
+    <button type="submit">Show Score</button>
+</form>
+{% endblock %}

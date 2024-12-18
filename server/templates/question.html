@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Question{% endblock %}
+
+{% block content %}
+<h2>Answer the Question</h2>
+<p>{{ question.question }}</p>
+
+<form action="{% url 'submit_answer' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="question_id" value="{{ question.id }}">
+    <label>
+        <input type="radio" name="answer" value="{{ question.correct_answer }}">
+        {{ question.correct_answer }}
+    </label><br>
+    <label>
+        <input type="radio" name="answer" value="{{ question.incorrect_answer_1 }}">
+        {{ question.incorrect_answer_1 }}
+    </label><br>
+    <label>
+        <input type="radio" name="answer" value="{{ question.incorrect_answer_2 }}">
+        {{ question.incorrect_answer_2 }}
+    </label><br>
+    <label>
+        <input type="radio" name="answer" value="{{ question.incorrect_answer_3 }}">
+        {{ question.incorrect_answer_3 }}
+    </label><br>
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<!-- Home Button -->
+<form action="{% url 'start_quiz' %}" method="get">
+    <button type="submit">Home</button>
+</form>
+
+<!-- Show Score Button -->
+<form action="{% url 'get_score' %}" method="get">
+    <button type="submit">Show Score</button>
+</form>
+{% endblock %}
