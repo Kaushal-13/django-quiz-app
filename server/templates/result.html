@@ -13,8 +13,10 @@
 <!-- Show Score Button -->
 <a href="{% url 'get_score' %}" class="button">Show Score</a>
 
-<p>Your current score: {{ score }} / {{ total_questions }}</p>
-
 <!-- Next Question Button -->
 <a href="{% url 'get_question' %}" class="button">Next Question</a>
+
+<form action="{% url 'start_quiz' %}" method="get">
+    <button type="submit">Home</button>
+</form>
 {% endblock %}
